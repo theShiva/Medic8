@@ -2,13 +2,17 @@
 
 This repo contains my solution to the Pulse8.com Technical interview coding test / challenge.
 
-## Requirements
+## Solution Demo and Code Walk-though
+
+Check out this 200 second video wherein I do a demo of the solution followed by a code walk-through.
+
+[![pulse 8 technical interview coding test](/Docs/pulse8-coding-test-medic8-query-results-screenshot.png)](https://www.youtube.com/watch?v=uOmDjZC0gmY "pulse 8 technical interview coding test")
+
+## The Requirements
 
 ### The requirements for this technical test ![can be found here](/Docs/Pulse8-Technical-Interview.pdf?raw=true "pulse 8 technical interview coding test solution") 
 
 The .SQL script file to create the database is in the `\Docs` folder in this repo.
-
-![BondsBuddy API V1 Endpoints](/Docs/Media/v1-api-homepage-screenshot.png?raw=true "BondsBuddy API V1 Endpoints") 
 
 ### The Solution.
 
