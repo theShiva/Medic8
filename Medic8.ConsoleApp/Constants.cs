@@ -1,0 +1,45 @@
+﻿namespace Medic8.ConsoleApp
+{
+    public static class Constants
+    {
+        public static string AllMembersDiagnosisSqlStatement 
+                                => "WITH "
+                                    + "  CTE_SEVERE_DIAGANOSIS (MemberId, MostSevereDiagnosisId)"
+                                    + "  AS"
+                                    + "  ( SELECT "
+                                    + "      md.MemberId"
+                                    + "      , MIN(md.DiagnosisId)"
+                                    + "    FROM "
+                                    + "      MemberDiagnosis md "
+                                    + "	GROUP BY md.MemberId"
+                                    + "),"
+                                    + "  CTE_MOST_SEVERE_CATEGORY (MemberId, MostSevereCategoryId)"
+                                    + "  AS"
+                                    + "  ( SELECT "
+                                    + "      md.MemberId"
+                                    + "      , MIN(dc.DiagnosisCategoryID)"
+                                    + "    FROM"
+                                    + "	  MemberDiagnosis md "
+                                    + "      LEFT JOIN DiagnosisCategoryMap dcm ON dcm.DiagnosisID = md.DiagnosisID"
+                                    + "      LEFT JOIN DiagnosisCategory dc ON dcm.DiagnosisCategoryID = dc.DiagnosisCategoryID"
+                                    + "    GROUP BY md.MemberId"
+                                    + ")"
+                                    + "SELECT "
+                                    + "  m.MemberId AS 'MemberId'"
+                                    + "  , m.FirstName as 'FirstName'"
+                                    + "  , m.LastName AS 'LastName'"
+                                    + "  , sd.MostSevereDiagnosisId AS 'MostSevereDiagnosisId'"
+                                    + "  , d.DiagnosisDescription AS 'MostSevereDiagnosisDescription'"
+                                    + "  , msc.MostSevereCategoryId AS 'MostSevereCategoryId'"
+                                    + "  , dc.CategoryDescription  AS 'CategoryDescription'"
+                                    + "  , dc.CategoryScore AS 'CategoryScore'"
+                                    + "  , COALESCE(msc.MostSevereCategoryId,1) as 'IsMostSevereCategory'"
+                                    + "FROM"
+                                    + "  Member m "
+                                    + "	LEFT JOIN CTE_SEVERE_DIAGANOSIS sd ON m.MemberId = sd.MemberId"
+                                    + "   LEFT JOIN Diagnosis d ON sd.MostSevereDiagnosisId =  d.DiagnosisID"
+                                    + "	LEFT JOIN CTE_MOST_SEVERE_CATEGORY msc ON m.MemberId = msc.MemberId"
+                                    + "   LEFT JOIN DiagnosisCategory dc ON msc.MostSevereCategoryId = dc.DiagnosisCategoryID"
+                                    + " WHERE m.MemberId = @TheMemberId";
+    }
+}
