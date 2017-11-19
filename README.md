@@ -6,6 +6,8 @@ This repo contains my solution to the Pulse8.com Technical interview coding test
 
 Check out this 200 second video wherein I do a demo of the solution followed by a code walk-through.
 
+### Pro Tip: If the video appears blurry, make sure you select HD from the playback settings (bottom right - gear icon)
+
 [![pulse 8 technical interview coding test](/Docs/pulse8-coding-test-youtube-video-screenshot.png)](https://www.youtube.com/watch?v=uOmDjZC0gmY "pulse 8 technical interview coding test")
 
 ## The Requirements
