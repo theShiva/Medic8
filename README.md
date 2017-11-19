@@ -6,7 +6,7 @@ This repo contains my solution to the Pulse8.com Technical interview coding test
 
 Check out this 200 second video wherein I do a demo of the solution followed by a code walk-through.
 
-[![pulse 8 technical interview coding test](/Docs/pulse8-coding-test-medic8-query-results-screenshot.png)](https://www.youtube.com/watch?v=uOmDjZC0gmY "pulse 8 technical interview coding test")
+[![pulse 8 technical interview coding test](/Docs/pulse8-coding-test-youtube-video-screenshot.png)](https://www.youtube.com/watch?v=uOmDjZC0gmY "pulse 8 technical interview coding test")
 
 ## The Requirements
 
