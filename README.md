@@ -18,7 +18,7 @@ The .SQL script file to create the database is in the `\Docs` folder in this rep
 
 ### The Solution.
 
-Here's the SQL query I wrote
+[Here's the SQL query I wrote](https://github.com/theShiva/Medic8/blob/master/Medic8.ConsoleApp/Scripts/Get_All_Member_Diagnosis_Query.sql)
 
 ### The T-SQL Query Output.
 
